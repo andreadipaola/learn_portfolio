@@ -51,6 +51,10 @@ a:hover {
   color: #beda10;
 }
 
+p {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
 /* Creo una regola css che vada bene per bottoni ma anche per link che abbiano l'aspetto di un bottone */
 .button {
   background-color: #8279bb;
@@ -149,10 +153,49 @@ section {
 }
 
 .works-item {
-
+  margin-bottom: 96px;
 }
 
 .works-item-tags {
   font-size: 24px;
   color: #beda10;
+}
+
+.work-info {
+  display: flex; /* Allinea About con il testo relativo in orizzontale come da default */
+}
+
+.work-info-label {
+  width: 200px; /* !!!ATTENZIONE LUI SETTA 200px MA IO PER DISTANZIARE LA LABEL DAL TESTO NE HO BISOGNO DI 800!!!Do una larghezza fissa al container che contiene la label e rendo fluido successivamente il container che contiene il testo relativo */
+  /* RISOLTO: settando successivamente la width del 70% alla colonna del contenuto adiacente alla colonna della label si è risolto tutto ea desso funziona anche con 200px come va video */
+  flex-grow: 0; /* Voglio che il container della label ossia About non si ingradisca ma piuttosto rimanga fissa */
+  flex-shrink: 1; /* Mi riservo la facoltà che tuttavia il suddetto container possa eventualmente dimuinuire */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Voglio che la colonna del testo relativo alla label sia fluido quindi setto una larghezza in percentuale ed inoltre che possa crescere insieme a tutto il resto e che a sua volta possa anche diminuire  */
+.work-info-content {
+  width: 70%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images img {
+  margin-bottom: 36px;
+}
+
+
+.image-right {
+  align-self: flex-end;
+}
+
+.image-left {
+  align-self: flex-start;
 }
