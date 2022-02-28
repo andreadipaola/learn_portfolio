@@ -1,14 +1,22 @@
+/* Faccio un reset di margini e pagging cambio il box-sizing in border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+/* Osservo il layout e creo le regole css per gli elementi di base e che si ripetono */
 body {
   background-color: #070514;
   color: #ffffff;
   font-family: 'Work Sans', sans-serif;
-  font-size: 100%;
+  font-size: 100%; /* E' una buona pratica indicare al browser di fare riferimento alla font di default di 16px */
+}
+
+/* Lascio un po' di spazio inferiore in tutte le intestazioni */
+h1, h2, h3 {
+  margin-bottom: 48px;
 }
 
 h1 {
@@ -21,6 +29,7 @@ h2 {
   font-size: 64px;
   font-weight: 600;
   line-height: 75px;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -42,6 +51,7 @@ a:hover {
   color: #beda10;
 }
 
+/* Creo una regola css che vada bene per bottoni ma anche per link che abbiano l'aspetto di un bottone */
 .button {
   background-color: #8279bb;
   color: #ffffff;
@@ -49,11 +59,100 @@ a:hover {
   font-weight: 600;
   text-transform: uppercase;
   padding: 12px 24px;
-  border: none;
+  border: none; /* Faccio il reset del bordo incluso di default nel tag button */
   border-radius: 36px;
 }
 
 .button:hover {
   background-color: #beda10;
   color: #070514;
+}
+
+/* Creo un elemento contenitore centrato ma che comuqnue non sfori una determinata larghezza */
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+}
+
+/* Diamo un po' di spazio tra le varie section altrimenti risulterebbero attaccate tra loro, se tolgo questo padding ad esempio la section che contiene i tag risulterà attaccata a quella hero */
+section {
+   padding-top: 64px;
+   padding-bottom: 64px;
+}
+/* Do alla section un altezza uguale come tutto lo schermo del dispositivo utilizzato, applico inoltre un gradiente servendomi del sito cssgradient.io */
+.hero {
+  height: 100vh; /* Faccio in modo che la section occupi tutta la superficie del viewport */
+  background: linear-gradient(0deg, rgba(7,5,20,1) 0%, rgba(15,25,93 ,1) 31%);
+}
+
+/* Questa seconda classe riferita al container la creo per centrare il contenuto nello stesso */
+/* Faccio in modo che il container abbia la stessa altezza della section e inoltre predispongo le regole flexbox per centrarne il contenuto verticalmente */
+.hero-content {
+  height: 100%; /* Il container eredita l'altezza della section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Questa proprietà mi consente di allineare "solamente" il link alla destra del contenitore */
+.hero-cta {
+  align-self: flex-end;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Voglio che la larghezza sia il 100% del viewport */
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(9,2,49) 100%);
+
+}
+
+.header-content {
+  display: flex; /* Serve per allineare il logo al menu, anche questo come di default lo allinea in orizzontale e ci va bene così */
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 42px;
+  text-transform: uppercase;
+  margin-right: 64px;
+}
+
+.menu ul {
+  list-style-type: none; /* Rimuovo i puntini dall'elenco */
+  display: flex; /* allinea gli elementi del menu in orizzontale da defaul, ossia works e contacts */
+}
+
+.menu ul li {
+  margin-right: 24px;
+}
+
+.menu ul li a {
+  font-size: 24px;
+}
+
+.works-menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.works-menu ul li {
+  margin-right: 24px;
+}
+
+.works {
+
+}
+
+.works-item {
+
+}
+
+.works-item-tags {
+  font-size: 24px;
+  color: #beda10;
 }
