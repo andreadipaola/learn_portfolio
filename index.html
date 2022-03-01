@@ -13,22 +13,14 @@
   </head>
   <body>
 
-    <!-- <h1>Titolo 1</h1>
-    <h2>Titolo 2</h2>
-    <h3>Titolo 3</h3>
-
-    <a href="#">Link</a>
-    <br>
-    <button class="button">Button</button> -->
-
     <!-- Header  -->
     <header class="header">
       <div class="container header-content">
         <div class="logo">Andrea Di Paola</div>
         <nav class="menu">
           <ul>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="#works-section">Works</a></li>
+            <li><a href="#contacts-section">Contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -47,19 +39,21 @@
     <section class="works-menu">
       <div class="container">
         <ul>
-          <li><a class="button" href="#">Portrait</a></li>
-          <li><a class="button" href="#">Fashion</a></li>
-          <li><a class="button" href="#">Street</a></li>
+          <li><a class="button" href="#first-item">Portrait</a></li>
+          <li><a class="button" href="#second-item">Fashion</a></li>
+          <li><a class="button" href="#third-item">Street</a></li>
         </ul>
       </div>
     </section>
 
     <!-- Work Items -->
     <section class="works">
+      <a class="position-anchors" id="works-section"></a>
       <div class="container">
 
        <!-- Work Item 1 -->
         <div class="works-item">
+          <a class="position-anchors" id="first-item"></a>
           <div class="works-item-tags">Fashion Photography \ Rome \ 2020</div>
           <h2>Fashion</h2>
 
@@ -87,6 +81,7 @@
 
         <!-- Work Item 2 -->
         <div class="works-item">
+          <a class="position-anchors" id="second-item"></a>
           <div class="works-item-tags">Portrait Photography \ Rome \ 2019</div>
           <h2>Ritratti Comuni</h2>
 
@@ -114,6 +109,7 @@
 
         <!-- Work Item 3 -->
         <div class="works-item">
+          <a class="position-anchors" id="third-item"></a>
           <div class="works-item-tags">Food Photography \ Rome \ 2021</div>
           <h2>Italian Food</h2>
 
@@ -137,16 +133,43 @@
             <img class="image-left" src="img/3.jpg" alt="">
           </div>
         </div>
-        <!-- Work Item 3 -->
-        <section>
-          <div class="container contact-content">
-            <div class="contacts-about"></div>
-            <div class="contacts-form"></div>
-          </div>
-        </section>
+    </div>
+    </section>
+    <!-- Work Item 3 -->
 
+    <!-- contacts -->
+    <section class="contacts">
+      <a class="position-anchors" id="contacts-section"></a>
+      <div class="container contact-content"> <!-- La seconda classe la diamo per utilizzare flexbox con i componenti all'interno di questo contenitore, in questo caso le due colonne -->
+        <div class="contacts-about">
+          <h2>About Me</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div> <!-- Colonne del contenitore -->
+        <div class="contacts-form">
+          <form action="">
+            <label class="input-label" for="">Full Name</label>
+            <input class="input-field" type="text" placeholder="Name Surname">
+
+            <label class="input-label" for="">email</label>
+            <input class="input-field" type="email" placeholder="example@mail.com">
+
+            <label class="input-label" for="">Subject</label>
+            <input class="input-field" type="text" placeholder="example subject">
+
+            <label class="input-label" for="">Message <span>Optional</span></label>
+            <textarea class="input-textarea" placeholder="write here"></textarea>
+
+            <button class="button" type="button">Send</button>
+          </form>
+        </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="copyright">Andrea Di Paola © 2022</div>
+      </div>
+    </footer>
 
   </body>
 </html>

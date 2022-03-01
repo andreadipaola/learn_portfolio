@@ -72,6 +72,34 @@ p {
   color: #070514;
 }
 
+.input-label {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.input-label span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.input-field,
+.input-textarea {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  color: #757575;
+  background-color: #0e0062;
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.input-textarea {
+  height: 100px;
+}
+
 /* Creo un elemento contenitore centrato ma che comuqnue non sfori una determinata larghezza */
 .container {
   width: 80%;
@@ -111,6 +139,7 @@ section {
   left: 0;
   width: 100%; /* Voglio che la larghezza sia il 100% del viewport */
   background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(9,2,49) 100%);
+  z-index: 5;
 
 }
 
@@ -137,6 +166,11 @@ section {
 
 .menu ul li a {
   font-size: 24px;
+}
+
+.works-menu {
+  position: sticky;
+  top: -15px;
 }
 
 .works-menu ul {
@@ -198,4 +232,35 @@ section {
 
 .image-left {
   align-self: flex-start;
+}
+
+.contacts {}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-about,
+.contacts-form {
+  width: 40%;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.footer {
+  background: linear-gradient(180deg, rgba(7,5,20,1) 0%, rgba(14,0,98 ,1) 100%);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.copyright {
+  color: #757575;
+}
+
+/* position hack */
+.position-anchors {
+  visibility: hidden;
+  position: relative;
+  top: -150px;
 }
