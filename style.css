@@ -155,12 +155,6 @@ section {
    padding-bottom: 64px;
 }
 
-@media screen and (max-width: 576px) {
-  .section {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
 /* Do alla section un altezza uguale come tutto lo schermo del dispositivo utilizzato, applico inoltre un gradiente servendomi del sito cssgradient.io */
 .hero {
   height: 100vh; /* Faccio in modo che la section occupi tutta la superficie del viewport */
@@ -263,11 +257,6 @@ section {
   display: flex; /* Allinea About con il testo relativo in orizzontale come da default */
   flex-wrap: wrap;
 }
-@media screen and (max-width: 576px) {
-  .work-info {
-    margin-bottom: 12px;
-  }
-}
 
 .work-info-label {
   width: 200px; /* !!!ATTENZIONE LUI SETTA 200px MA IO PER DISTANZIARE LA LABEL DAL TESTO NE HO BISOGNO DI 800!!!Do una larghezza fissa al container che contiene la label e rendo fluido successivamente il container che contiene il testo relativo */
@@ -276,12 +265,6 @@ section {
   flex-shrink: 1; /* Mi riservo la facoltà che tuttavia il suddetto container possa eventualmente dimuinuire */
   font-weight: 600;
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 576px) {
-  .work-info-label {
-    font-size: 24px;
-  }
 }
 
 /* Voglio che la colonna del testo relativo alla label sia fluido quindi setto una larghezza in percentuale ed inoltre che possa crescere insieme a tutto il resto e che a sua volta possa anche diminuire  */
