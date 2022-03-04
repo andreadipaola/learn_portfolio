@@ -25,6 +25,14 @@ h1 {
   line-height: 113px;
 }
 
+/* RESPONSIVE */
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
 h2 {
   font-size: 64px;
   font-weight: 600;
@@ -32,10 +40,26 @@ h2 {
   text-transform: uppercase;
 }
 
+/* RESPONSIVE */
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+
 h3 {
   font-size: 48px;
   font-weight: normal;
   line-height: 56px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 576px) {
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 a {
@@ -51,10 +75,27 @@ a:hover {
   color: #beda10;
 }
 
+/* RESPONSIVE */
+@media screen and (max-width: 576px) {
+  a {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
 p {
   font-size: 24px;
   margin-bottom: 16px;
 }
+
+/* RESPONSIVE */
+@media screen and (mac-width: 576px) {
+  p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
 /* Creo una regola css che vada bene per bottoni ma anche per link che abbiano l'aspetto di un bottone */
 .button {
   background-color: #8279bb;
@@ -113,6 +154,13 @@ section {
    padding-top: 64px;
    padding-bottom: 64px;
 }
+
+@media screen and (max-width: 576px) {
+  .section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
 /* Do alla section un altezza uguale come tutto lo schermo del dispositivo utilizzato, applico inoltre un gradiente servendomi del sito cssgradient.io */
 .hero {
   height: 100vh; /* Faccio in modo che la section occupi tutta la superficie del viewport */
@@ -145,6 +193,7 @@ section {
 
 .header-content {
   display: flex; /* Serve per allineare il logo al menu, anche questo come di default lo allinea in orizzontale e ci va bene così */
+  flex-wrap: wrap; /* RESPONSIVE serve per mandare a capo gli elementi inq uesto caso il menu qualora non ci fosse sufficiente spazio */
 }
 
 .logo {
@@ -153,6 +202,14 @@ section {
   line-height: 42px;
   text-transform: uppercase;
   margin-right: 64px;
+}
+
+@media screen and (max-width: 576px) {
+  .logo {
+    line-height: 30px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
 }
 
 .menu ul {
@@ -171,6 +228,13 @@ section {
 .works-menu {
   position: sticky;
   top: -15px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .works-menu {
+    display: none;
+  }
 }
 
 .works-menu ul {
@@ -197,6 +261,12 @@ section {
 
 .work-info {
   display: flex; /* Allinea About con il testo relativo in orizzontale come da default */
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 576px) {
+  .work-info {
+    margin-bottom: 12px;
+  }
 }
 
 .work-info-label {
@@ -206,6 +276,12 @@ section {
   flex-shrink: 1; /* Mi riservo la facoltà che tuttavia il suddetto container possa eventualmente dimuinuire */
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 576px) {
+  .work-info-label {
+    font-size: 24px;
+  }
 }
 
 /* Voglio che la colonna del testo relativo alla label sia fluido quindi setto una larghezza in percentuale ed inoltre che possa crescere insieme a tutto il resto e che a sua volta possa anche diminuire  */
@@ -223,6 +299,7 @@ section {
 
 .images img {
   margin-bottom: 36px;
+  max-width: 100% /* RESPONSIVE le immagini non dovranno mai superare la larghezza del container padre */
 }
 
 
@@ -236,7 +313,7 @@ section {
 
 .contacts {}
 
-.contact-content {
+.contacts-content {
   display: flex;
   justify-content: space-between;
 }
@@ -246,6 +323,21 @@ section {
   width: 40%;
   flex-grow: 0;
   flex-shrink: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts-content {
+    flex-direction: column;
+  }
+
+  .contacts-about,
+  .contacts-form {
+    width: 100%;
+  }
+
+  .contacts-about {
+    margin-bottom: 64px;
+  }
 }
 
 .footer {
