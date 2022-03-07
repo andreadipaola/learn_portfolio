@@ -339,3 +339,19 @@ section {
   position: relative;
   top: -150px;
 }
+
+.back-to-top {
+  background-image: url("img/up-arrow4.png");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #8279bb;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+}
