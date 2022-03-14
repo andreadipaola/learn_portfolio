@@ -118,6 +118,7 @@ p {
   font-weight: 600;
   text-transform: uppercase;
 }
+
 .input-label span {
   font-size: 18px;
   font-weight: 400;
@@ -139,6 +140,7 @@ p {
 
 .input-textarea {
   height: 100px;
+  resize: none;
 }
 
 /* Creo un elemento contenitore centrato ma che comuqnue non sfori una determinata larghezza */
@@ -147,6 +149,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   max-width: 1140px;
+  border: 2px solid red;
 }
 
 /* Diamo un po' di spazio tra le varie section altrimenti risulterebbero attaccate tra loro, se tolgo questo padding ad esempio la section che contiene i tag risulterà attaccata a quella hero */
@@ -159,6 +162,7 @@ section {
 .hero {
   height: 100vh; /* Faccio in modo che la section occupi tutta la superficie del viewport */
   background: linear-gradient(0deg, rgba(7,5,20,1) 0%, rgba(15,25,93 ,1) 31%);
+  border: 3px solid yellow;
 }
 
 /* Questa seconda classe riferita al container la creo per centrare il contenuto nello stesso */
@@ -182,6 +186,7 @@ section {
   width: 100%; /* Voglio che la larghezza sia il 100% del viewport */
   background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(9,2,49) 100%);
   z-index: 5;
+  /* border: 3px solid yellow; */
 
 }
 
